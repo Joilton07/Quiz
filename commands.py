@@ -1,4 +1,2 @@
-# communs commands
 COMMAND_EXIT = "exit"
-
-#Players commands
+COMMAND_CREATE_PLAYER = "add"
