@@ -1,5 +1,5 @@
 from commands import COMMAND_EXIT, COMMAND_CREATE_PLAYER
-from setting  import GAME_NAME, LANG, LANGS
+from settings  import GAME_NAME, LANG, LANGS
 
 run = True
 player = []
