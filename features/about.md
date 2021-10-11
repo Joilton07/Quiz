@@ -1,6 +1,4 @@
-1. [-] Jogo de perguntas e resposta
-2. [-] Cadastro de jogador
-3. [-] Play do jogo
-4. [-] Randomizar perguntas
-5. [-] O jogador vai responder cada pergunta
-6. [-] O jogo vai dar o resultado que o jogar conseguiu
+[ ] Jogo de perguntas e resposta
+[X] Cadastro de jogador
+[X] Play do jogo
+[ ] Randomizar perguntas
