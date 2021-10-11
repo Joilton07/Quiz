@@ -1,12 +1,17 @@
 GAME_NAME = "QuizGame"
-LANG = "pt"
+LANG = "eng"
 
 # languages
-LANGS = {
+TEXTS = {
     "eng": {
-        "create_user": "User name"
+        "create_user": "User name",
+        "create_question": "Question"
     },
     "pt": {
-        "create_user": "Nome de usuário"
+        "create_user": "Nome de usuário",
+        "create_question": "Pergunta"
     }
 }
+
+def get_message(key):
+    return TEXTS[LANG][key]
