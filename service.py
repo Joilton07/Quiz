@@ -1,53 +1,7 @@
-from settings import get_message, OPTIONS_BY_QUESTION, SCORE_BY_QUESTION
+from settings import get_message, SCORE_BY_QUESTION
 from database import players, questions 
 from utils import divider
 from random import choice
-
-# adiciona um novo jogador do tipo dict na lista players
-def create_player():
-    divider()
-    message = get_message("create_user")
-    name = input(f"{message}")
-    new_player = {"name": name, "score": 0}
-    players.append(new_player)
-    divider()
-
-# list os jogadores da lista players
-def list_players():
-    divider()
-    for player in players:
-        template = "{} - {}"
-        print(template.format(player["name"], str(player["score"])))
-    divider()
-
-# adiciona uma nova questão do tipo dict na lista questions
-def create_question():
-    message = get_message("create_question")
-    question = input(f"{message}")
-    new_question = {"question": question, "options": []}
-
-    for i in range(0, OPTIONS_BY_QUESTION):
-        number = i + 1
-        new_option = create_option(number) # chama a funçâo de criar uma opção para a questão
-        new_question["options"].append(new_option)
-    
-    message_correct_option = get_message("correct_option")
-    option_correct = int(input(f"{message_correct_option}: ")) # solicite a resposta correta
-
-    #busca a opção selecionada a cima e atribui como correta
-    for option in new_question["options"]:
-        if option["number"] == option_correct:
-            option["correct"] = True
-            break # para parar a execução do for
-
-    questions.append(new_question) # adiciona a dict na lista
-    divider()
-
-def create_option(number):
-    message_option = get_message("create_option")
-    option = input(f"{message_option} {number}: ")
-    new_option = {"number": number, "option": option, "correct": False}
-    return new_option
 
 def list_questions():
     divider()
